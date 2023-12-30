@@ -24,9 +24,8 @@ public class Board {
     }
     public void printBoard(){
         for (int i = 0; i < size; i++) {
-            List<Cell> row = board.get(i);
             for (int j = 0; j < size; j++) {
-                row.get(j).display();
+                board.get(i).get(j).displayCell();
             }
             System.out.println();
         }

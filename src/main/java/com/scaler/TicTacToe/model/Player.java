@@ -29,6 +29,7 @@ public class Player {
         int row = scanner.nextInt();
         int col = scanner.nextInt();
         //validate the move  and throw exception
+
         board.getBoard().get(row).get(col).setPlayer(this);
         board.getBoard().get(row).get(col).setCellState(CellState.FILLED);
         return new Move(new Cell(row,col,this), this);

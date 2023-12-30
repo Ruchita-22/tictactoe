@@ -4,8 +4,7 @@ import com.scaler.TicTacToe.model.Game;
 import com.scaler.TicTacToe.model.Move;
 import com.scaler.TicTacToe.model.Player;
 import com.scaler.TicTacToe.model.enums.GameState;
-import com.scaler.TicTacToe.strategies.winningStrategies.OrderOneWinningStrategy;
-import com.scaler.TicTacToe.strategies.winningStrategies.WinningStrategy;
+import com.scaler.TicTacToe.strategies.winningStrategies.*;
 
 import java.util.List;
 
@@ -15,7 +14,8 @@ public class GameController {
             return Game.builder()
                     .setDimension(dimension)
                     .setPlayers(players)
-                    .setWinningStrategies(List.of(new OrderOneWinningStrategy(dimension)))
+                    //.setWinningStrategies(List.of(new OrderOneWinningStrategy(dimension)))
+                    .setWinningStrategies(List.of(new RowWinningStrategy(dimension), new ColWinningStrategy(dimension), new DiagonalWinningStrategy()))
                     .build();
 
         }catch (Exception e){

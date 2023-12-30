@@ -1,7 +1,6 @@
 package com.scaler.TicTacToe.model;
 
 import com.scaler.TicTacToe.model.enums.CellState;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
@@ -24,7 +23,7 @@ public class Cell {
         this.player = player;
     }
 
-    public void display(){
+    public void displayCell(){
         if (player == null)
             System.out.print("| |");
         else if (cellState.equals(CellState.BLOCKED))
